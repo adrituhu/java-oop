@@ -1,0 +1,25 @@
+package programmer.masa.kini.application;
+
+import programmer.masa.kini.data.Customer;
+import programmer.masa.kini.data.Level;
+
+public class EnumApp {
+    public static void main(String[] args) {
+        Customer customer = new Customer();
+        customer.setName("Adri");
+        customer.setLevel(Level.PREMIUM);
+
+        System.out.println(customer.getName());
+        System.out.println(customer.getLevel());
+        System.out.println(customer.getLevel().getDescription());
+
+        Level level = Level.valueOf("PREMIUM");
+        System.out.println(level);
+
+        System.out.println("Print Level");
+        for (var value : Level.values()){
+            System.out.println(value);
+        }
+
+    }
+}
